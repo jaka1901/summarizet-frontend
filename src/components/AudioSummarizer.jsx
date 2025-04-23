@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { API_BASE_URL } from '../constants/global';
 
 export default function AudioSummarizer() {
   const [summary, setSummary] = useState('')
@@ -8,7 +7,7 @@ export default function AudioSummarizer() {
     const formData = new FormData()
     formData.append('audio', e.target.files[0])
 
-    const res = await fetch(`${API_BASE_URL}/summarize-audio`, {
+    const res = await fetch(`api/summarize-audio`, {
       method: 'POST',
       body: formData
     })

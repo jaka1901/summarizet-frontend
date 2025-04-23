@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { API_BASE_URL } from '../constants/global';
 
 export default function VideoSummarizer() {
   const [summary, setSummary] = useState('')
@@ -8,7 +7,7 @@ export default function VideoSummarizer() {
     const formData = new FormData()
     formData.append('video', e.target.files[0])
 
-    const res = await fetch(`${API_BASE_URL}/summarize-video`, {
+    const res = await fetch(`api/summarize-video`, {
       method: 'POST',
       body: formData
     })

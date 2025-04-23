@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { API_BASE_URL } from '../constants/global';
 
 export default function FileSummarizer() {
   const [summary, setSummary] = useState('')
@@ -8,7 +7,7 @@ export default function FileSummarizer() {
     const formData = new FormData()
     formData.append('file', e.target.files[0])
 
-    const res = await fetch(`${API_BASE_URL}/summarize-file`, {
+    const res = await fetch(`api/summarize-file`, {
       method: 'POST',
       body: formData
     })
