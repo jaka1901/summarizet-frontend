@@ -20,7 +20,7 @@ export default function TextSummarizer() {
       <textarea rows={10} cols={60} onChange={(e) => setText(e.target.value)} />
       <br />
       <button onClick={handleSummarize}>Summarize</button>
-      <pre>{summary}</pre>
+      <p style={{whiteSpace: "pre-line"}}>{summary}</p>
     </div>
   )
 }

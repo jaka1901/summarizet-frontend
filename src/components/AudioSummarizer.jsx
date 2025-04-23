@@ -19,7 +19,7 @@ export default function AudioSummarizer() {
   return (
     <div>
       <input type="file" accept="audio/*" onChange={handleAudioUpload} />
-      <pre>{summary}</pre>
+      <p style={{whiteSpace: "pre-line"}}>{summary}</p>
     </div>
   )
 }

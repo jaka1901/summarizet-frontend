@@ -19,7 +19,7 @@ export default function FileSummarizer() {
   return (
     <div>
       <input type="file" onChange={handleFileUpload} />
-      <pre>{summary}</pre>
+      <p style={{whiteSpace: "pre-line"}}>{summary}</p>
     </div>
   )
 }

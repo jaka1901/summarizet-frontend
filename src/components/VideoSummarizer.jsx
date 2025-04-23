@@ -19,7 +19,7 @@ export default function VideoSummarizer() {
   return (
     <div>
       <input type="file" accept="video/*" onChange={handleVideoUpload} />
-      <pre>{summary}</pre>
+      <p style={{whiteSpace: "pre-line"}}>{summary}</p>
     </div>
   )
 }
