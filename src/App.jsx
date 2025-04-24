@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import TextSummarizer from './components/TextSummarizer'
 import SummarizeFromURL from './components/SummarizeFromURL'
 import FileSummarizer from './components/FileSummarizer'
-import AudioSummarizer from './components/AudioSummarizer'
-import VideoSummarizer from './components/VideoSummarizer'
 
 const App = () => {
   const [type, setType] = useState('text')
@@ -13,8 +11,6 @@ const App = () => {
       case 'text': return <TextSummarizer />
       case 'url': return <SummarizeFromURL />
       case 'file': return <FileSummarizer />
-      case 'audio': return <AudioSummarizer />
-      case 'video': return <VideoSummarizer />
       default: return null
     }
   }
@@ -28,8 +24,6 @@ const App = () => {
           <option value="text">Text</option>
           <option value="url">URL</option>
           <option value="file">File (PDF/DOCX)</option>
-          <option value="audio">Audio</option>
-          <option value="video">Video</option>
         </select>
       </label>
       <div style={{ marginTop: 20 }}>
