@@ -60,7 +60,7 @@ const SummarizeFromURL = () => {
       {summary && (
         <div className="mt-4">
           <h3 className="font-semibold">Summary:</h3>
-          <p className="text-gray-700">{summary}</p>
+          <p style={{whiteSpace: "pre-line"}}>{summary}</p>
         </div>
       )}
     </div>
